@@ -25,7 +25,7 @@ TemperatureZero TempZero = TemperatureZero();
          if ( appEui != NULL ) set(APP_EUI, appEui);
          if ( devEui != NULL ) set(DEV_EUI, devEui);
          if ( appKey != NULL ) set(APP_KEY, appKey);
-         network_joined = join();
+         network_joined = join(15000);
          delay(1000);
          return network_joined;
       }
