@@ -266,7 +266,7 @@ void loop() {
   static int8_t frame[1] = {0};
 
   if ( (millis() - lastEmit) > EMIT_RATE ) {
-    frame[1] = (int8_t)TempZero.readInternalTemperature();
+    frame[0] = (int8_t)TempZero.readInternalTemperature();
     modem.beginPacket();
     modem.write((uint8_t *)frame,1);
     modem.endPacket(false);
